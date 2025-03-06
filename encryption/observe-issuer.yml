@@ -7,7 +7,7 @@ spec:
     # The ACME server URL
     server: https://acme-v02.api.letsencrypt.org/directory
     # Email address used for ACME registration
-    email: obakinolugbade@gmail.com
+    email: no_reply@triafed.cloud
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: observe-priv
@@ -15,15 +15,15 @@ spec:
     solvers:
     - selector:
         dnsNames:
-          - "matter-dashboard.devopsnetwork.net"
-          - "matter-monitor.devopsnetwork.net"
+          - "matter-dashboard.gc.triafed.cloud"
+          - "matter-monitor.gc.triafed.cloud"
       dns01:
         route53:
-          region: us-east-2
+          region: us-gov-east-1
           # The AWS access key ID can be specified using the literal accessKeyID parameter
           # or retrieved from a secret using the accessKeyIDSecretRef
           # If using accessKeyID, omit the accessKeyIDSecretRef parameter and vice-versa
-          hostedZoneID: Z00777903RWLGIFSJQB59
+          hostedZoneID: Z005386476TQKSZZSDMV
           accessKeyIDSecretRef:
             name: konoha
             key: ichiraku
